@@ -1,0 +1,18 @@
+<section class="main-content">
+
+  <h3>
+    <a id="demo" class="anchor" href="#demo" aria-hidden="true">
+      <span aria-hidden="true" class="octicon octicon-link"></span>
+    </a>Demo
+  </h3>
+  <span><button (click)="exportExcel()">Export</button></span>
+  
+  <div>
+    <ng2-smart-table [settings]="settings" [source]="source"
+                     (createConfirm)="onCreateConfirm($event)"
+                     (deleteConfirm)="onDeleteConfirm($event)"
+                     (editConfirm)="onSaveConfirm($event)"
+                     (userRowSelect) = "userRowSelect($event)"
+    ></ng2-smart-table>
+  </div>
+</section>
